@@ -1,0 +1,69 @@
+
+/* le asignamos al body una imagen de fondo */
+body{
+    background-image: url("/images/principal.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+      
+}
+
+h1 {
+    animation: movimiento 2s infinite;
+    text-align: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    font-size: 5rem;
+  }
+  
+  @keyframes movimiento {
+    0% {
+      color: white;
+    }
+    20% {
+      color: darkviolet;
+    }
+    40% {
+      color: brown;
+    }
+    60% {
+      color: lawngreen;
+    }
+    80% {
+      color: blue;
+    }
+    100% {
+      color: purple;
+    }
+  }
+  /* colocamos el boton debajo del h1*/
+button {
+    display: block;
+    margin: 0 auto;
+    animation: botonprincipal 2s infinite;
+    font-size: 2rem;
+    background-color: transparent;
+    font-family: cursive;
+    border-style: none;
+    cursor:pointer;
+    
+}
+@keyframes botonprincipal {
+    0% {
+      color: white;
+    }
+    20% {
+      color: darkviolet;
+    }
+    40% {
+      color: brown;
+    }
+    60% {
+      color: lawngreen;
+    }
+    80% {
+      color: blue;
+    }
+    100% {
+      color: purple;
+    }
+  }
