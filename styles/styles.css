@@ -13,6 +13,7 @@ h1 {
     margin-top: 50vh;
     transform: translateY(-50%);
     font-size: 5rem;
+    
   }
   
   @keyframes movimiento {
@@ -39,31 +40,33 @@ h1 {
 button {
     display: block;
     margin: 0 auto;
-    animation: botonprincipal 2s infinite;
     font-size: 2rem;
     background-color: transparent;
     font-family: cursive;
-    border-style: none;
     cursor:pointer;
-    
+    border-style: none;
+}
+a{ 
+    text-decoration: none;
+    animation: botonprincipal 2s infinite;
 }
 @keyframes botonprincipal {
     0% {
       color: white;
     }
     20% {
-      color: darkviolet;
+      color: aqua;
     }
     40% {
-      color: brown;
+      color: chartreuse;
     }
     60% {
-      color: lawngreen;
+      color: yellow;
     }
     80% {
-      color: blue;
+      color: violet;
     }
     100% {
-      color: purple;
+      color: red;
     }
   }
