@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/styles/stylesindex.css">
+    
+    <title>Principal</title>
+</head>
+<body>
+    <div class="container">
+		<h1>Mi sitio web</h1>
+		
+	</div>
+<!--Video de fondo-->
+    <video autoplay muted loop id="video-background">
+        <source src="/videos/video1.mp4" type="video/mp4">
+    </video>
+<!--Botones-->
+    <button class="rainbow-button" id="python-btn">
+        <a href="/page1.html" target="_blank">Si</a>
+    </button>
+
+    <button class="no-button" id="no">No</button>
+    <!--Aqui se le da el movimiento al boton No-->
+    <script>
+        const button = document.getElementById("no");
+        
+        button.addEventListener("mouseover", () => {
+          const newTop = Math.floor(Math.random() * window.innerHeight);
+          const newLeft = Math.floor(Math.random() * window.innerWidth);
+        
+          button.style.top = newTop + "px";
+          button.style.left = newLeft + "px";
+        });
+    </script>
+    
+</body>
+</html>

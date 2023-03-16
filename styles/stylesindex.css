@@ -1,0 +1,109 @@
+
+/* le asignamos al body un video de fondo */
+body {
+  background: #000000; 
+  margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+#video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+
+h1 {
+    animation: movimiento 2s infinite;
+    text-align: center;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    font-size: 5rem;
+    
+  }
+  
+  @keyframes movimiento {
+    0% {
+      color: white;
+    }
+    20% {
+      color: darkviolet;
+    }
+    40% {
+      color: brown;
+    }
+    60% {
+      color: lawngreen;
+    }
+    80% {
+      color: blue;
+    }
+    100% {
+      color: purple;
+    }
+  }
+  /* colocamos el boton debajo del h1*/
+button {
+    
+    display: block;
+    margin: 0 auto;
+    font-size: 2rem;
+    
+    font-family: cursive;
+    cursor:pointer;
+    border-style: none;
+   
+}
+/*Brillo de fondo al background color*/
+.rainbow-button {
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 100px;
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  0% {
+    background-color: #ff0000;
+  }
+  100% {
+    background-color: #00ff00;
+  }
+}
+
+.no-button{
+  background-color: #ff0000;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 100px;
+  animation: blink 1s infinite alternate;
+}
+a{ 
+  
+    text-decoration: none;
+    animation: botonprincipal 2s infinite;
+}
+/*Logo de python en boton*/
+button img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+  /*darle animación al boton no para que se mueva*/
+  #no {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
