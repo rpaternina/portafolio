@@ -65,24 +65,27 @@
 
 .header .nav-links a{
   font-size: 700;
-  color: red;
+  color: white;
   text-decoration: none;
+  font-family: cursive;
 }
 
 .header .nav-links li a:hover{
-  color: black;
+  color: aqua;
+  
 }
 
 .header .btn button{
   margin-left: 20px;
   font-weight: 700;
-  color: red;
+  color: white;
   padding: 9px 25px;
-  background: white;
+  background: transparent;
   border: none;
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  font-family: cursive;
 }
 
 .header .btn button:hover{
