@@ -1,109 +1,92 @@
-
-/* le asignamos al body un video de fondo */
-body {
-  background: #000000; 
+*{
   margin: 0;
-	padding: 0;
-	height: 100%;
-	width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Asignamos las propiedades a nuestro container para que sea responsive*/
+.container{
+  position: relative;
+  height: 100vh;
+}
+/*Ahora le aplicamos el css a nuestro video*/
+.video-container{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video-container video{
+  position: relative;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
+/*estilos al header*/
+.header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 85px;
+  padding: 5px 10%;
+
+}
+.header .logo{
+  cursor: pointer;
+  margin-right: auto;
 }
 
-.container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 20px;
+.header .logo img{
+  height: 70px;
+  width: auto;
+  transition: all 0.3s;
 }
 
-#video-background {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%; 
-  min-height: 100%;
-  z-index: -1;
+.header .logo img:hover{
+  transform: scale(1.2);
 }
 
-h1 {
-    animation: movimiento 2s infinite;
-    text-align: center;
-    margin-top: 50vh;
-    transform: translateY(-50%);
-    font-size: 5rem;
-    
-  }
-  
-  @keyframes movimiento {
-    0% {
-      color: white;
-    }
-    20% {
-      color: darkviolet;
-    }
-    40% {
-      color: brown;
-    }
-    60% {
-      color: lawngreen;
-    }
-    80% {
-      color: blue;
-    }
-    100% {
-      color: purple;
-    }
-  }
-  /* colocamos el boton debajo del h1*/
-button {
-    
-    display: block;
-    margin: 0 auto;
-    font-size: 2rem;
-    
-    font-family: cursive;
-    cursor:pointer;
-    border-style: none;
-   
-}
-/*Brillo de fondo al background color*/
-.rainbow-button {
-  background-color: #ff0000;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 100px;
-  animation: blink 1s infinite alternate;
+.header .nav-links{
+  list-style: none ;
 }
 
-@keyframes blink {
-  0% {
-    background-color: #ff0000;
-  }
-  100% {
-    background-color: #00ff00;
-  }
+.header .nav-links li{
+  display: inline-block;
+  padding: 0 20px;
 }
 
-.no-button{
-  background-color: #ff0000;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 100px;
-  animation: blink 1s infinite alternate;
+.header .nav-links li:hover{
+  transform: scale(1.1);
 }
-a{ 
-  
-    text-decoration: none;
-    animation: botonprincipal 2s infinite;
+
+.header .nav-links a{
+  font-size: 700;
+  color: red;
+  text-decoration: none;
 }
-/*Logo de python en boton*/
-button img {
-  width: 50px;
-  height: 50px;
-  margin-right: 10px;
+
+.header .nav-links li a:hover{
+  color: black;
 }
-  /*darle animación al boton no para que se mueva*/
-  #no {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+
+.header .btn button{
+  margin-left: 20px;
+  font-weight: 700;
+  color: red;
+  padding: 9px 25px;
+  background: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.header .btn button:hover{
+  background-color: blueviolet;
+  color: aqua;
+  transform: scale(1.1);
+}
